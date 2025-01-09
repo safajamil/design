@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshmen Fall: Calculus Professors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .professor {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .professor h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+        .comments {
+            margin-top: 10px;
+        }
+        .comments div {
+            margin-bottom: 5px;
+        }
+        .toggle {
+            color: #007BFF;
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleComments(id) {
+            const comments = document.getElementById(id);
+            if (comments.classList.contains('hidden')) {
+                comments.classList.remove('hidden');
+            } else {
+                comments.classList.add('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Freshmen Fall: Calculus Professors</h1>
+    </header>
+    <div class="container">
+        <div class="professor">
+            <h2>Karam Fayad</h2>
+            <p>+: Organized lectures, explains well, helpful office hours, ensures students understand concepts.</p>
+            <p>-: Exams are on the tougher side but curving helps.</p>
+            <span class="toggle" onclick="toggleComments('fayad-comments')">Show/Hide Comments</span>
+            <div class="comments hidden" id="fayad-comments">
+                <div>"Gives enough exercises to prepare for exams."</div>
+                <div>"One of the best professors on campus."</div>
+                <div>"Exams are challenging but manageable."</div>
+                <div>"Great for understanding calculus deeply."</div>
+            </div>
+        </div>
+        <div class="professor">
+            <h2>Michele Pavon</h2>
+            <p>+: Patient, understanding, makes time for students.</p>
+            <p>-: Can be slow with explanations.</p>
+            <span class="toggle" onclick="toggleComments('pavon-comments')">Show/Hide Comments</span>
+            <div class="comments hidden" id="pavon-comments">
+                <div>"Super nice and always answers questions."</div>
+                <div>"Explains things well but can be boring."</div>
+            </div>
+        </div>
+        <div class="professor">
+            <h2>Houssam Abdul Rahman</h2>
+            <p>+: Lenient grader, organized, easier exams.</p>
+            <p>-: Inadequate explanations, often behind on material.</p>
+            <span class="toggle" onclick="toggleComments('rahman-comments')">Show/Hide Comments</span>
+            <div class="comments hidden" id="rahman-comments">
+                <div>"Easier papers than Fayad."</div>
+                <div>"Terrible at explaining and always behind."</div>
+                <div>"One of the best professors for some students."</div>
+            </div>
+        </div>
+        <div class="professor">
+            <h2>Zantout</h2>
+            <p>+: Nice if effort is shown, thorough explanations, organized.</p>
+            <p>-: Expects a lot of homework, strict about attendance.</p>
+            <span class="toggle" onclick="toggleComments('zantout-comments')">Show/Hide Comments</span>
+            <div class="comments hidden" id="zantout-comments">
+                <div>"Thorough and detailed explanations."</div>
+                <div>"Strict about attendance even with valid excuses."</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
